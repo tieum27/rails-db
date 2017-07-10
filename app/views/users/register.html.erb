@@ -1,0 +1,23 @@
+<h1>Users#register</h1>
+<p>Find me in app/views/users/register.html.erb</p>
+
+<form action="/users/phone" method="GET">
+  <input type="text" name="phone1" placeholder="Your 1st phone number" autofocus required/><br />
+  <input type="text" name="phone2" placeholder="Your 1st phone number" autofocus required/><br />
+  <input type="text" name="phone3" placeholder="Your 1st phone number" autofocus required/><br />
+
+  <input type="submit" value="Register" />
+</form>
+
+<br />
+<h3>Search for your phone number(s)</h3>
+<form action="/users/user_find" method="GET">
+  <input type="text" name="user_find" placeholder="User Name" autofocus required/><br />
+
+  <input type="submit" value="Register" />
+</form>
+<% if @phones != nil %>
+<%= @phones.phone1 %><br />
+<%= @phones.phone2 %><br />
+<%= @phones.phone3 %><br />
+<%end %>
